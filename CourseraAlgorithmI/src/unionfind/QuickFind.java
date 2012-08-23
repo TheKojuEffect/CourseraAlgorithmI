@@ -1,6 +1,10 @@
 package unionfind;
 
+<<<<<<< HEAD
 public class QuickFind implements UnionFind{
+=======
+public class QuickFind implements UnionFind {
+>>>>>>> quickUnion
 	
 	private int[]	id;
 	
