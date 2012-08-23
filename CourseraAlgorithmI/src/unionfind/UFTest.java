@@ -11,7 +11,7 @@ public class UFTest {
 		
 		ufList.add(new QuickFind(nodes));
 		ufList.add(new QuickUnion(nodes));
-		ufList.add(new WeightedQuickUnion(nodes));
+		ufList.add(new WeightedQuickUnionUF(nodes));
 		ufList.add(new QUPathCompression(nodes));
 		
 		for (int i = 0; i < ufList.size(); i++) {

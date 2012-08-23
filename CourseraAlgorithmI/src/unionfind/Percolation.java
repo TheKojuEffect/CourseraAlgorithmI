@@ -4,12 +4,12 @@ public class Percolation {
 	
 	private boolean[][] grid;
 	private int size; // grid size
-	private WeightedQuickUnion uf;
+	private WeightedQuickUnionUF uf;
 	
 	public Percolation(int size) {
 		this.size = size;
 		grid = new boolean[size][size];
-		uf = new WeightedQuickUnion(size * size);
+		uf = new WeightedQuickUnionUF(size * size);
 	}
 	
 	public boolean isFull(int i, int j) {

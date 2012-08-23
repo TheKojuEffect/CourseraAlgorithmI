@@ -1,11 +1,11 @@
 package unionfind;
 
-public class WeightedQuickUnion implements UnionFind {
+public class WeightedQuickUnionUF implements UnionFind {
 	
 	private int[]	id;
 	private int[]	size;
 	
-	public WeightedQuickUnion(int number) {
+	public WeightedQuickUnionUF(int number) {
 		id = new int[number];
 		size = new int[number];
 		for (int i = 0; i < id.length; i++)
@@ -35,4 +35,4 @@ public class WeightedQuickUnion implements UnionFind {
 			size[i] += size[j];
 		}
 	} // end method union
-} // end class WeightedQuickUnion
+} // end class WeightedQuickUnionUF
