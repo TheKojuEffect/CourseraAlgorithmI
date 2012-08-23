@@ -32,7 +32,7 @@ public class Percolation {
 		if (i != 0 && isOpen(i - 1, j)) // top of the node
 			uf.union(i * size + j, (i - 1) * size + j);
 		
-		if (i < size-1 && isOpen(i + 1, j)) // bottom of the node
+		if (i < size - 1 && isOpen(i + 1, j)) // bottom of the node
 			uf.union(i * size + j, (i + 1) * size + j);
 		
 		if (j != 0 && isOpen(i, j - 1)) // left of the node
@@ -45,7 +45,8 @@ public class Percolation {
 	public boolean percolates() {
 		boolean percolate = false;
 		for (int jIndex = 0; jIndex < grid[0].length && percolate == false; jIndex++) {
-			percolate = isFull(size - 1, jIndex);
+			if (isOpen(size - 1, jIndex))
+				percolate = isFull(size - 1, jIndex);
 		}
 		return percolate;
 	} // end method percolates
