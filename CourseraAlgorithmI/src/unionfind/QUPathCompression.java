@@ -13,10 +13,10 @@ public class QUPathCompression {
 	}
 	
 	private int root(int i) {
-		int node = i;
-		while (i != id[i])
+		while (i != id[i]) {
+			id[i] = id[id[i]];
 			i = id[i];
-		id[node] = i;
+		}
 		return i;
 	} // end method root
 	
