@@ -1,6 +1,6 @@
 package unionfind;
 
-public class WeightedQuickUnion {
+public class WeightedQuickUnion implements UnionFind {
 	
 	private int[]	id;
 	private int[]	size;
@@ -18,10 +18,12 @@ public class WeightedQuickUnion {
 		return i;
 	} // end method root
 	
+	@Override
 	public boolean connected(int p, int q) {
 		return root(p) == root(q);
 	} // end method connected
 	
+	@Override
 	public void union(int p, int q) {
 		int i = root(p);
 		int j = root(q);
