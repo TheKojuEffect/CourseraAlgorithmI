@@ -7,7 +7,7 @@ public class Percolation {
 	private WeightedQuickUnion uf;
 	
 	public Percolation(int size) {
-		size = this.size;
+		this.size = size;
 		grid = new boolean[size][size];
 		uf = new WeightedQuickUnion(size * size);
 	}
@@ -32,8 +32,8 @@ public class Percolation {
 		if (i != 0 && isOpen(i - 1, j)) // top of the node
 			uf.union(i * size + j, (i - 1) * size + j);
 		
-		if (i != size - 1 && isOpen(i + 1, j)) // bottom of the node
-			uf.union(i * size + j, (i - 1) * size + j);
+		if (i < size-1 && isOpen(i + 1, j)) // bottom of the node
+			uf.union(i * size + j, (i + 1) * size + j);
 		
 		if (j != 0 && isOpen(i, j - 1)) // left of the node
 			uf.union(i * size + j, i * size + j - 1);
