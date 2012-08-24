@@ -2,14 +2,16 @@ package unionfind;
 
 public class WeightedQuickUnion implements UnionFind {
 	
-	private int[]	id;
-	private int[]	size;
+	private int[] id;
+	private int[] size;
 	
 	public WeightedQuickUnion(int number) {
 		id = new int[number];
 		size = new int[number];
-		for (int i = 0; i < id.length; i++)
+		for (int i = 0; i < id.length; i++) {
 			id[i] = i;
+			size[i] = 1;
+		}
 	}
 	
 	private int root(int i) {
@@ -35,4 +37,10 @@ public class WeightedQuickUnion implements UnionFind {
 			size[i] += size[j];
 		}
 	} // end method union
+	
+	public void display() {
+		for (int node : id) {
+			System.out.print("" + node + " ");
+		}
+	} // end method display
 } // end class WeightedQuickUnion

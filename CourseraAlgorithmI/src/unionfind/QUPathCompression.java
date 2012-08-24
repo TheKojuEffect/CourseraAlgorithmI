@@ -2,14 +2,16 @@ package unionfind;
 
 public class QUPathCompression implements UnionFind {
 	
-	private int[]	id;
-	private int[]	size;
+	private int[] id;
+	private int[] size;
 	
 	public QUPathCompression(int number) {
 		id = new int[number];
 		size = new int[number];
-		for (int i = 0; i < id.length; i++)
+		for (int i = 0; i < id.length; i++) {
 			id[i] = i;
+			size[i] = 1;
+		}
 	}
 	
 	private int root(int i) {
