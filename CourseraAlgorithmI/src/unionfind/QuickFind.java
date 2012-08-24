@@ -26,4 +26,10 @@ public class QuickFind implements UnionFind {
 			if (id[i] == pid)
 				id[i] = qid;
 	} // end method union
+	
+	public void display() {
+		for (int node : id) {
+			System.out.print(""+node+" ");
+		}
+	} // end method display
 } // end class QuickFind

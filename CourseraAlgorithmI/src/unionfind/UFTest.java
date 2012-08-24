@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class UFTest {
 	
-	private final static int	nodes	= 10;
+	private final static int nodes = 10;
 	
 	public static void main(String[] args) {
 		ArrayList<UnionFind> ufList = new ArrayList<>(4);
@@ -18,13 +18,12 @@ public class UFTest {
 			UnionFind uf = ufList.get(i);
 			System.out.println("For " + uf.getClass().getSimpleName());
 			long startTime = System.nanoTime();
-			uf.union(5, 6);
-			uf.union(5, 0);
-			uf.union(2, 7);
-			uf.union(1, 7);
-			uf.union(3, 4);
-			uf.union(3, 8);
-			uf.union(4, 9);
+			uf.union(0, 4);
+			uf.union(9, 5);
+			uf.union(0, 3);
+			uf.union(9, 2);
+			uf.union(7, 2);
+			uf.union(8, 3);
 			long unionEndTime = System.nanoTime();
 			double unionTime = (double) (unionEndTime - startTime) / 1000;
 			System.out.println("Union Time : " + unionTime + " us");
