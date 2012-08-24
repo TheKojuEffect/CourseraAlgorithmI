@@ -120,7 +120,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 				int randomNum = randomGenerator.nextInt(randomSeq.length);
 				int temp = randomSeq[i];
 				randomSeq[i] = randomSeq[randomNum];
-				randomSeq[randomNum] temp;
+				randomSeq[randomNum] = temp;
 			}
 			
 			for (int i = 0; i < randomSeq[0]; i++)
